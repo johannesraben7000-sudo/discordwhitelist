@@ -1,0 +1,29 @@
+# ===================================================
+# Discord Whitelist Plugin Configuration
+# ===================================================
+
+discord:
+  # Create a bot at https://discord.com/developers/applications
+  # Enable "MESSAGE CONTENT INTENT" under Bot settings, then paste the token below.
+  bot-token: "YOUR_BOT_TOKEN_HERE"
+
+  # The ID of the channel where people post their Minecraft username.
+  # Right click the channel in Discord (with Developer Mode enabled) -> Copy Channel ID
+  whitelist-channel-id: "PUT_CHANNEL_ID_HERE"
+
+# If true, the bot deletes the person's message after processing it
+# (keeps the channel clean — just leaves the bot's reply).
+delete-message-after-processing: true
+
+# If true, a Discord user can only ever whitelist one Minecraft account.
+# A record is kept in discord-links.yml. Set to false to allow re-linking/multiple accounts.
+one-account-per-discord-user: true
+
+# Messages the bot sends back in the channel
+messages:
+  success: "✅ **%username%** has been added to the whitelist!"
+  invalid-username: "❌ `%input%` doesn't look like a valid Minecraft username. Please just send your exact in-game name (no spaces, 3-16 characters)."
+  not-a-real-account: "❌ Couldn't find a Minecraft account named **%input%**. Double check the spelling."
+  already-linked: "❌ You've already whitelisted an account (**%username%**). Contact staff if you need this changed."
+  already-whitelisted: "ℹ️ **%username%** is already whitelisted!"
+  error: "⚠️ Something went wrong processing that. Please try again or contact staff."

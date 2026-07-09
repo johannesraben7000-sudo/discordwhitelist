@@ -1,0 +1,18 @@
+name: DiscordWhitelist
+version: '1.0.0'
+main: com.example.discordwhitelist.DiscordWhitelistPlugin
+api-version: '1.21'
+author: YourName
+description: Auto-whitelists players who post their Minecraft username in a Discord channel.
+
+commands:
+  discordwhitelist:
+    description: Manage/reload the Discord Whitelist plugin
+    aliases: [dwl]
+    permission: discordwhitelist.admin
+    usage: /discordwhitelist reload
+
+permissions:
+  discordwhitelist.admin:
+    description: Allows managing the Discord Whitelist plugin
+    default: op
